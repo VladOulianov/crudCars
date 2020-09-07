@@ -1,0 +1,26 @@
+
+  </div><%- include('./partials/head')-%>
+  <h1>liste des joueurs</h1>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+  
+        
+  
+        <div class="card" style="width: 18rem;">
+          <img src="<%= car.image %> " class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title"><%= car.modele %></h5>
+            <p class="card-text"><%= car.Constructeur %></p>
+            <a href="/cars/update/<%= car.carId %> " class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+  
+      
+  
+      </div>
+    </div>
+  </div>
+  
+  
+  <%- include('./partials/footer')-%>

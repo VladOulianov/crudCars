@@ -1,0 +1,56 @@
+<div class="container">
+    <div class="row">
+      <div class="col-md-12">
+  
+  
+  <%- include('./partials/head')-%>
+  
+  
+  <form action='/cars/add' method="POST">
+    <div class="form-row">
+      <div class="col-md-6 mb-3">
+        <label for="validationDefault01">modele</label>
+        <input type="text" class="form-control" id="validationDefault01" required name="name" >
+      </div>
+      <div class="col-md-3 mb-3">
+        <label for="validationCustom04">Constructeur</label>
+        <select class="custom-select" name="factoryId">
+  
+          <% factories.forEach(function(factory){%>
+            <option selected="selected" value="<%= factory.id %>" ><%= factory.name %> </option>
+          <%});%>
+  
+        </select>
+      </div>
+      <div class="col-md-6 mb-3">
+        <label for="validationDefault02">Prix</label>
+        <input type="text" class="form-control"  id="validationDefault02" required name="price" >
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="col-md-6 mb-3">
+        <label for="validationDefault03">Année</label>
+        <input type="text" class="form-control"  id="validationDefault03" required name="years" >
+      </div>
+      <div class="col-md-6 mb-3">
+        <label for="validationDefault03">Image</label>
+        <input type="text" class="form-control"  id="validationDefault03" required name="image" >
+      </div>
+      <div class="col-md-3 mb-3">
+        <label for="validationCustom04">Energie</label>
+        <select class="custom-select" name="energyId">
+  
+          <% energies.forEach(function(energy){%>
+            <option selected="selected" value="<%= energy.id %>" > <%= energy.name %> </option>
+          <%});%>
+  
+        </select>
+      </div>
+    <button class="btn btn-primary" type="submit">Submit form</button>
+  </form>
+  
+  <%- include('./partials/footer')-%>
+  
+    </div>
+    </div>
+  </div>
